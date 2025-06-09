@@ -12,8 +12,10 @@ import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.event.EventListener;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
@@ -38,11 +40,11 @@ public class HmdrinksApplication {
 
 	}
 
-	@PostConstruct
-	public void init() {
-//		shipperComissionDetailService.updateAllShipperCommissions();
+	@EventListener(ApplicationReadyEvent.class)
+	public void onApplicationReady() {
 		supportFunction.resetShipperDaily();
 	}
+
 
 
 
