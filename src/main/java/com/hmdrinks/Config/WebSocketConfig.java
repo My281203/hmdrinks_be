@@ -20,6 +20,6 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
         // Đăng ký endpoint cho client kết nối
-        registry.addEndpoint("/ws").setAllowedOrigins("https://hmdrinks-t8e3-giahans-projects.vercel.app").withSockJS();
+        registry.addEndpoint("/ws").setAllowedOrigins("https://hmdrinks-t8e3-kj7ox33yu-giahans-projects.vercel.app").withSockJS();
     }
 }
