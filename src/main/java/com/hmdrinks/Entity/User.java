@@ -12,13 +12,14 @@ import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
-@Data
+
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "user")
+@Data
 public class User {
 
     @Id

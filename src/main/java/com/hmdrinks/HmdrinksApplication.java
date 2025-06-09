@@ -21,23 +21,22 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @OpenAPIDefinition(servers = {@Server(url = "/", description = "HMDrinks Server URL")})
 @SpringBootApplication(scanBasePackages = "com.hmdrinks")
-//@EnableAsync
-//@EnableScheduling
+@EnableAsync
+@EnableScheduling
 public class HmdrinksApplication {
 
-//	@Autowired
-//	private SupportFunction supportFunction;
+	@Autowired
+	private SupportFunction supportFunction;
 
 	public static void main(String[] args) {
 
 		SpringApplication.run(HmdrinksApplication.class, args);
 
 	}
-
-//	@EventListener(ApplicationReadyEvent.class)
-//	public void onApplicationReady() {
-//		supportFunction.resetShipperDaily();
-//	}
+	@EventListener(ApplicationReadyEvent.class)
+	public void onApplicationReady() {
+		supportFunction.resetShipperDaily();
+	}
 
 
 
