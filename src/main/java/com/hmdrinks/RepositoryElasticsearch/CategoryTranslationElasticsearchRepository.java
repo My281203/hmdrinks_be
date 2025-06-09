@@ -7,11 +7,11 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
-
+import org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository;
 import java.util.List;
 
 @Repository
-public interface CategoryTranslationElasticsearchRepository extends ElasticsearchRepository<CategoryTranslationElasticsearch, String> {
+public interface CategoryTranslationElasticsearchRepository extends ReactiveElasticsearchRepository<CategoryTranslationElasticsearch, String> {
 
     @Query("""
 {
