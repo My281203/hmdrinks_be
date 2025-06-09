@@ -5,9 +5,9 @@ import org.springframework.data.elasticsearch.repository.ElasticsearchRepository
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
+import org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository;
 @Repository
-public interface ProductVariantsElasticsearchRepository extends ElasticsearchRepository<ProductVariantsElasticsearch, String> {
+public interface ProductVariantsElasticsearchRepository extends ReactiveElasticsearchRepository<ProductVariantsElasticsearch, String> {
 
     List<ProductVariantsElasticsearch> findByProductIdAndIsDeletedFalse(Integer productId);
 }
