@@ -175,7 +175,7 @@ public class SecurityConfig {
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration corsConfiguration = new CorsConfiguration();
-        corsConfiguration.setAllowedOrigins(Arrays.asList("https://hmdrinks-t8e3-git-frontend-giahans-projects.vercel.app","https://hmdrinks-be.up.railway.app"));
+        corsConfiguration.setAllowedOrigins(Arrays.asList("https://hmdrinks-t8e3-git-frontend-giahans-projects.vercel.app","https://hmdrinks-t8e3.vercel.app","https://hmdrinks-be.up.railway.app"));
         corsConfiguration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"));
         corsConfiguration.setAllowedHeaders(Arrays.asList("Authorization", "content-type"));
         corsConfiguration.setAllowCredentials(true);
