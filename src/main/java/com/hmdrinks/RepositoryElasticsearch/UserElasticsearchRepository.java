@@ -8,9 +8,9 @@ import org.springframework.data.elasticsearch.repository.ElasticsearchRepository
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
+import org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository;
 @Repository
-public interface UserElasticsearchRepository extends ElasticsearchRepository<UserDocument, String> {
+public interface UserElasticsearchRepository extends ReactiveElasticsearchRepository<UserDocument, String> {
 
     @Query("{" +
             "  \"bool\": {" +
