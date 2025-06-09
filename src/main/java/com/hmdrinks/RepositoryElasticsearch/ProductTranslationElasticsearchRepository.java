@@ -9,8 +9,9 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+import org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository;
 @Repository
-public interface ProductTranslationElasticsearchRepository extends ElasticsearchRepository<ProductTranslationElasticsearch, String> {
+public interface ProductTranslationElasticsearchRepository extends ReactiveElasticsearchRepository<ProductTranslationElasticsearch, String> {
 
     List<ProductTranslationElasticsearch> findByProNameContainingAndIsDeletedFalse(String proName);
 
