@@ -11,7 +11,7 @@ import java.util.List;
 
 import org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository;
 @Repository
-public interface ProductTranslationElasticsearchRepository extends ReactiveElasticsearchRepository<ProductTranslationElasticsearch, String> {
+public interface ProductTranslationElasticsearchRepository extends ElasticsearchRepository<ProductTranslationElasticsearch, String> {
 
     List<ProductTranslationElasticsearch> findByProNameContainingAndIsDeletedFalse(String proName);
 

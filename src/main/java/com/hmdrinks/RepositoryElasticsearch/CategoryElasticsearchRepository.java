@@ -14,7 +14,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface CategoryElasticsearchRepository extends ReactiveElasticsearchRepository<CategoryElasticsearch, String> {
+public interface CategoryElasticsearchRepository extends ElasticsearchRepository<CategoryElasticsearch, String> {
 
 
 

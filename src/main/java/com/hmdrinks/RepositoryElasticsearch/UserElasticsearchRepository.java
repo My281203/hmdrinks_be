@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 import org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository;
 @Repository
-public interface UserElasticsearchRepository extends ReactiveElasticsearchRepository<UserDocument, String> {
+public interface UserElasticsearchRepository extends ElasticsearchRepository<UserDocument, String> {
 
     @Query("{" +
             "  \"bool\": {" +

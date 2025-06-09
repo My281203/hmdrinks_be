@@ -13,7 +13,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 import org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository;
 @Repository
-public interface ProductElasticsearchRepository extends ReactiveElasticsearchRepository<ProductElasticsearch, String> {
+public interface ProductElasticsearchRepository extends ElasticsearchRepository<ProductElasticsearch, String> {
 
     List<ProductElasticsearch> findByProNameContaining(String keyword);
     Page<ProductElasticsearch> findByProNameContainingOrDescriptionContainingAndIsDeletedFalse(

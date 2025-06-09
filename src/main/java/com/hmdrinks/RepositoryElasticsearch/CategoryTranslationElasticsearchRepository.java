@@ -11,7 +11,7 @@ import org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRe
 import java.util.List;
 
 @Repository
-public interface CategoryTranslationElasticsearchRepository extends ReactiveElasticsearchRepository<CategoryTranslationElasticsearch, String> {
+public interface CategoryTranslationElasticsearchRepository extends ElasticsearchRepository<CategoryTranslationElasticsearch, String> {
 
     @Query("""
 {
