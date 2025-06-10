@@ -28,8 +28,8 @@ public class HmdrinksApplication {
 	@Autowired
 	private SupportFunction supportFunction;
 
-	public static void main(String[] args) {
-
+	public static void main(String[] args) {  
+		TimeZone.setDefault(TimeZone.getTimeZone("Asia/Ho_Chi_Minh"));
 		SpringApplication.run(HmdrinksApplication.class, args);
 
 	}
